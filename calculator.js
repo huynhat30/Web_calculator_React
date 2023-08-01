@@ -24,7 +24,7 @@ const App = () => {
                 <button id = "multiply">*</button>
                 <button id = "divide">/</button>
 
-                <button id = "deleteAll">AC</button>
+                <button id = "clear">AC</button>
                 
             </div>
 
