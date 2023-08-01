@@ -4,13 +4,13 @@ const App = () => {
     const [getBGcolor, setBGcolor] = React.useState('#eef');
     const [bgThemeName, setBGthemeName] = React.useState('Light Mode');
     const [getCalc, setCalc] = React.useState('');
-    const [getResult, setResult] = React.useState('');
     
     const digits = [];
     const digitID = ['one','two','three','four','five','six','seven','eight','nine']
     const operation = ['/','*','-','+','.'];
 
     const themeBtn = document.getElementById('themeBtn');
+    const footer = document.getElementById('footer');
     const body = document.querySelector("body");
 
     const updateCal = (value) => {
@@ -21,10 +21,6 @@ const App = () => {
             return;
         }
         setCalc(getCalc + value);
-
-        if(!operation.includes(value)){
-            set(eval(getCalc + value).toString())
-        }
     }
 
     const resultOutput = () => {
@@ -53,6 +49,7 @@ const App = () => {
             setBGthemeName('Light Mode')
             themeChange(body, {'style': 'background-color: ' + getBGcolor})
             themeChange(themeBtn, {'style': 'background-color: #131a26; color: #eef'})
+            themeChange(footer, {'style': 'color: #131a2; font-weight: bold'})
         }
         else
         {
@@ -60,6 +57,7 @@ const App = () => {
             setBGthemeName('Dark Mode')
             themeChange(body, {'style': 'background-color: ' + getBGcolor})
             themeChange(themeBtn, {'style': 'background-color: #eef; color: #131a26'})
+            themeChange(footer, {'style': 'color: #eef; font-weight: bold'})
         }
     }
 
@@ -91,6 +89,8 @@ const App = () => {
         <div id="themeWrapper">
             <button id="themeBtn" onClick={bgChange}>Toggle: {bgThemeName}</button> 
         </div>
+
+        <div id="footer">By <a href="https://github.com/huynhat30">Huy Giang <i class="fa fa-github"></i></a></div>
     </div>
             
          
