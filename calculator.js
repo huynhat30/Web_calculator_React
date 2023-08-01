@@ -19,13 +19,12 @@ const App = () => {
             </div>
 
             <div id="operators">
+                <button id = "clear">AC</button>
+
                 <button id = "add">+</button>
                 <button id = "subtract">-</button>
                 <button id = "multiply">*</button>
-                <button id = "divide">/</button>
-
-                <button id = "clear">AC</button>
-                
+                <button id = "divide">/</button>            
             </div>
 
             <div id="keysDigit">
